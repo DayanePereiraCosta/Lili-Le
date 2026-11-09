@@ -1,6 +1,12 @@
 # ✨ Lili Lê — Uma aventura pelo mundo da leitura!
 
-![Lili Lê - Mundo Encantado](assets/images/tabIcons/lilile_cenario_encantado.jpg)
+<p align="center">
+  <img
+    src="assets/images/tabIcons/principal_lilile.png"
+    width="200"
+    alt="Lili Lê, personagem do mundo encantado da leitura"
+  />
+</p>
 
 **Toda grande aventura começa com uma descoberta. E toda descoberta pode começar com uma palavra!** 💜
 
