@@ -1,5 +1,5 @@
-
 import { useAudioPlayer } from 'expo-audio';
+import { useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import {
   Animated,
@@ -22,6 +22,7 @@ const LINHAS = [
 
 export default function PersonagemScreen() {
   const movimento = useRef(new Animated.Value(0)).current;
+  const router = useRouter();
 
   const [mostrarNome, setMostrarNome] = useState(true);
   const [nome, setNome] = useState('');
@@ -75,14 +76,15 @@ export default function PersonagemScreen() {
   }
 
   function continuar() {
-    if (!nome.trim()) return;
+  if (!nome.trim()) return;
 
-    Keyboard.dismiss();
-    console.log('Nome da criança:', nome.trim());
+  Keyboard.dismiss();
 
-    // Na próxima etapa, vamos guardar o nome
-    // e iniciar a aventura personalizada.
-  }
+  router.replace({
+    pathname: '/boas-vindas',
+    params: { nome: nome.trim() },
+  });
+}
 
   return (
     <View style={styles.container}>
